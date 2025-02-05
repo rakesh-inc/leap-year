@@ -1,6 +1,6 @@
 import {
   DivisibilityChecker,
-  GregorianCalender,
+  GregorianCalendar,
   JulianCalendar,
   LeapYearChecker,
 } from "./leap-year";
@@ -10,10 +10,10 @@ describe("LeapYearChecker", () => {
   describe("with Gregorian Calendar", () => {
     let leapYearChecker: LeapYearChecker;
     beforeEach(() => {
-      leapYearChecker = new LeapYearChecker(new GregorianCalender(divisibilityChecker));
+      leapYearChecker = new LeapYearChecker(new GregorianCalendar(divisibilityChecker));
     });
 
-    it("should return false when number is not divisible by 4", () => {
+    it("should return false when year is not divisible by 4", () => {
       expect(leapYearChecker.isLeapYear(1997)).toBe(false);
     });
 

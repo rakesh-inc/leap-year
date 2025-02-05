@@ -12,7 +12,7 @@ interface ICalendarSystem {
   isLeapYear(year: number): boolean;
 }
 
-export class GregorianCalender implements ICalendarSystem {
+export class GregorianCalendar implements ICalendarSystem {
   constructor(private divisibilityChecker: DivisibilityChecker) {}
   isLeapYear(year: number): boolean {
     return (
