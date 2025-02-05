@@ -11,10 +11,10 @@ export class DivisibilityChecker implements IDivisibilityChecker {
 export class LeapYearChecker {
   constructor(private divisibilityChecker: DivisibilityChecker) {}
   isLeapYear(year: number): boolean {
-    const isDivisibleBy4 = this.divisibilityChecker.isDivisibleBy(year, 4);
-    const isDivisibleBy100 = this.divisibilityChecker.isDivisibleBy(year, 100);
-    const isDivisibleBy400 = this.divisibilityChecker.isDivisibleBy(year, 400);
-
-    return (isDivisibleBy4 && !isDivisibleBy100) || isDivisibleBy400;
+    return (
+      (this.divisibilityChecker.isDivisibleBy(year, 4) &&
+        !this.divisibilityChecker.isDivisibleBy(year, 100)) ||
+      this.divisibilityChecker.isDivisibleBy(year, 400)
+    );
   }
 }
