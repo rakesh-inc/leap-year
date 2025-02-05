@@ -1,9 +1,9 @@
-import { LeapYearChecker } from "./leap-year";
+import { DivisibilityChecker, LeapYearChecker } from "./leap-year";
 
 describe("LeapYearChecker", () => {
   let leapYearChecker: LeapYearChecker;
   beforeEach(() => {
-    leapYearChecker = new LeapYearChecker();
+    leapYearChecker = new LeapYearChecker(new DivisibilityChecker());
   });
 
   it("should return false when number is not divisible by 4", () => {
