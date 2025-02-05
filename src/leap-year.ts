@@ -26,7 +26,7 @@ export class GregorianCalendar implements ICalendarSystem {
 export class JulianCalendar implements ICalendarSystem {
   constructor(private divisibilityChecker: DivisibilityChecker) {}
   isLeapYear(year: number): boolean {
-    return false;
+    return this.divisibilityChecker.isDivisibleBy(year, 4);
   }
 }
 
