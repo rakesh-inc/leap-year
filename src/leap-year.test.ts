@@ -24,4 +24,11 @@ describe("LeapYearChecker", () => {
       expect(leapYearChecker.isLeapYear(1800)).toBe(false);
     });
   });
+
+  describe("with Julian Calander", () => {
+    it("should return false when year is not divisible by 4", () => {
+      let leapYearChecker = new LeapYearChecker(new JulianCalendar(divisibilityChecker));
+      expect(leapYearChecker.isLeapYear(1996)).toBe(false);
+    });
+  });
 });
