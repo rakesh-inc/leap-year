@@ -1,5 +1,5 @@
 export class LeapYearChecker {
   isLeapYear(year: number): boolean {
-    return false;
+    return year % 4 === 0;
   }
 }
