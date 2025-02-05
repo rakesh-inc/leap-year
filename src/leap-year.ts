@@ -23,6 +23,13 @@ export class GregorianCalender implements ICalendarSystem {
   }
 }
 
+export class JulianCalendar implements ICalendarSystem {
+  constructor(private divisibilityChecker: DivisibilityChecker) {}
+  isLeapYear(year: number): boolean {
+    return false;
+  }
+}
+
 export class LeapYearChecker {
   constructor(private calendarSystem: ICalendarSystem) {}
   isLeapYear(year: number): boolean {

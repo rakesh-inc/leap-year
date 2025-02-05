@@ -1,4 +1,9 @@
-import { DivisibilityChecker, GregorianCalender, LeapYearChecker } from "./leap-year";
+import {
+  DivisibilityChecker,
+  GregorianCalender,
+  JulianCalendar,
+  LeapYearChecker,
+} from "./leap-year";
 
 describe("LeapYearChecker", () => {
   const divisibilityChecker = new DivisibilityChecker();
